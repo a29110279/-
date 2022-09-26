@@ -10,6 +10,8 @@ import javax.swing.*;
 public class test{
     public static void main(String[] args){
         Frame win = new Frame("Hello BOD!");
+        showImage(win); //show圖片要再設定視窗前
+        
         win.setLocation(200, 300);
         win.setSize(500, 300);
         win.setVisible(true);
@@ -18,21 +20,15 @@ public class test{
                 System.exit(1);
             }
         });
-
+        
     }
-
-    public static void showImage(){
-        JFrame frame = new JFrame("place_test");
-        JPanel panel = new JPanel();
+    
+    //顯示背景圖片的副程式 還無法依視窗大小縮放
+    public static void showImage(Frame win){
         JLabel label = new JLabel();
         label.setIcon(new ImageIcon("img/300.jfif"));
-        panel.add(label);
-        frame.add(panel);
-        frame.setBounds(200, 300, 500, 300);
-        frame.pack();
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        win.add(label);
     }
-
+     
 }
 
