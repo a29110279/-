@@ -1,6 +1,5 @@
 import java.awt.Graphics;  
-import java.awt.Image;  
-import java.io.File;  
+import java.awt.Image;
   
 import javax.swing.ImageIcon;  
 import javax.swing.JFrame;  
@@ -8,7 +7,7 @@ import javax.swing.JPanel;
   
 public class background_test_V_JPanel {  
   
-    JFrame jframe = new JFrame();  
+    JFrame jframe = new JFrame("Test");  
     public static JPanel GImage = null;  
   
     public background_test_V_JPanel() {  
@@ -17,8 +16,7 @@ public class background_test_V_JPanel {
   
     // 初始化窗口  
     public void initFrame() {  
-        // 利用JPanel添加背景图片  
-  
+        // 利用JPanel添加背景图片
         GImage = new JPanel() {  
   
             protected void paintComponent(Graphics g) {  
@@ -31,7 +29,7 @@ public class background_test_V_JPanel {
             }  
   
         };  
-        jframe.setTitle("测试背景图片");  
+        //jframe.setTitle("测试背景图片");  
         jframe.add(GImage);  
         jframe.pack();  
         jframe.setVisible(true);  
